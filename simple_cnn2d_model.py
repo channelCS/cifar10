@@ -48,14 +48,14 @@ print "Test Y shape",test_y.shape
 #bre
 
 
-model = Sequential()
+#model = Sequential()
 
-model.summary()
+#model.summary()
 # initiate RMSprop optimizer
-opt = keras.optimizers.rmsprop(lr=0.0001, decay=1e-6)
+#opt = keras.optimizers.rmsprop(lr=0.0001, decay=1e-6)
 
 # Let's train the model using RMSprop
-model.compile(loss='categorical_crossentropy',
+#model.compile(loss='categorical_crossentropy',
               optimizer=opt,
               metrics=['accuracy'])
 
@@ -63,7 +63,7 @@ model.compile(loss='categorical_crossentropy',
 #x_test = x_test.astype('float32')
 #x_train /= 255
 #x_test /= 255
-model.fit(train_x, train_y, epochs=10, batch_size=32,  verbose=1)
+model.fit(train_x, train_y, epochs=25, batch_size=64,  verbose=1)
 
 
 
